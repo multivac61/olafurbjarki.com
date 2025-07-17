@@ -1,12 +1,12 @@
 <script lang="ts">
 	import cute from '$lib/cute.jpeg';
 	import katla from '$lib/katla.jpeg';
-	import japan from '$lib/japan.jpeg';
+	import rocker from '$lib/rocker.jpeg';
 	import harpa from '$lib/harpa.jpeg';
 	import pirate from '$lib/pirate.jpeg';
 	import { fade } from 'svelte/transition';
 
-	const images = [cute, katla, japan, harpa, pirate];
+	const images = [cute, katla, rocker, harpa, pirate];
 	let selectedImage: string | null = null;
 	let currentImageIndex = 0;
 
@@ -75,7 +75,9 @@
 				></div>
 			</div>
 			<div class="overflow-hidden lg:h-full">
-				<div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32 lg:pb-8 lg:h-full lg:flex lg:items-center">
+				<div
+					class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:flex lg:h-full lg:items-center lg:px-8 lg:pt-32 lg:pb-8"
+				>
 					<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
 						<div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
 							<h1
@@ -185,11 +187,11 @@
 									<button
 										type="button"
 										class="aspect-2/3 w-full cursor-pointer rounded-xl border-0 bg-transparent p-0 shadow-lg"
-										on:click={() => openModal(japan)}
+										on:click={() => openModal(rocker)}
 									>
 										<img
-											src={japan}
-											alt="With my girlfriend during our trip to Japan"
+											src={rocker}
+											alt="With my Vietnamese rocker gang. We played on a boat ride in Ha Long Bay."
 											class="aspect-2/3 w-full rounded-xl object-cover"
 										/>
 									</button>
