@@ -253,10 +253,25 @@
 				<img src={selectedImage} alt="" class="max-h-screen max-w-full rounded-lg object-contain" />
 			</div>
 			<button
-				class="bg-opacity-50 absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black text-xl text-white transition-colors duration-200 hover:text-gray-300"
+				class="bg-opacity-50 absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors duration-200 hover:text-gray-300"
 				on:click={closeModal}
+				aria-label="Close modal"
 			>
-				×
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M18 6L6 18M6 6L18 18"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
 			</button>
 		</div>
 	</div>
