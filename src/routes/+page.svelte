@@ -31,7 +31,7 @@
 
 	function handleKeydown(event: KeyboardEvent) {
 		if (!selectedImage) return;
-		
+
 		if (event.key === 'Escape') {
 			closeModal();
 		} else if (event.key === 'ArrowRight') {
@@ -133,8 +133,9 @@
 									href="https://github.com/multivac61/fod-oracle"
 									target="_blank"
 									rel="noopener noreferrer">tooling for the Nix ecosystem</a
-								>. I've also been lucky to live and travel all over, for example Japan, China, USA,
-								Canada, Germany, Eswatini, South Africa...
+								>. I've also been lucky to live and travel all over, including Japan, Hong Kong,
+								Tibet, China, USA, Canada, Germany, Eswatini, Thailand, Vietnam, South Korea South
+								Africa...
 								<br />
 							</p>
 							<p
@@ -246,11 +247,7 @@
 				role="button"
 				tabindex="0"
 			>
-				<img
-					src={selectedImage}
-					alt=""
-					class="max-h-screen max-w-full rounded-lg object-contain"
-				/>
+				<img src={selectedImage} alt="" class="max-h-screen max-w-full rounded-lg object-contain" />
 			</div>
 			<button
 				class="bg-opacity-50 absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black text-xl text-white transition-colors duration-200 hover:text-gray-300"
