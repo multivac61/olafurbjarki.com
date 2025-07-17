@@ -19,14 +19,38 @@
 		selectedImage = null;
 	}
 
-	function nextImage() {
+	let isTransitioning = false;
+
+	async function nextImage() {
+		if (isTransitioning) return;
+		isTransitioning = true;
+
+		// Start fade out
+		await new Promise((resolve) => setTimeout(resolve, 300));
+
+		// Change image
 		currentImageIndex = (currentImageIndex + 1) % images.length;
 		selectedImage = images[currentImageIndex];
+
+		// Complete transition
+		await new Promise((resolve) => setTimeout(resolve, 300));
+		isTransitioning = false;
 	}
 
-	function prevImage() {
+	async function prevImage() {
+		if (isTransitioning) return;
+		isTransitioning = true;
+
+		// Start fade out
+		await new Promise((resolve) => setTimeout(resolve, 300));
+
+		// Change image
 		currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
 		selectedImage = images[currentImageIndex];
+
+		// Complete transition
+		await new Promise((resolve) => setTimeout(resolve, 300));
+		isTransitioning = false;
 	}
 
 	function handleKeydown(event: KeyboardEvent) {
@@ -240,7 +264,7 @@
 		role="dialog"
 		aria-modal="true"
 		tabindex="-1"
-		transition:fade={{ duration: 200 }}
+		transition:fade={{ duration: 400 }}
 	>
 		<div class="relative max-h-full max-w-full" transition:fade={{ duration: 300, delay: 100 }}>
 			<div
@@ -250,10 +274,16 @@
 				role="button"
 				tabindex="0"
 			>
-				<img src={selectedImage} alt="" class="max-h-screen max-w-full rounded-lg object-contain" />
+				<img
+					src={selectedImage}
+					alt=""
+					class="max-h-screen max-w-full rounded-lg object-contain transition-opacity duration-200"
+					class:opacity-0={isTransitioning}
+				/>
 			</div>
 			<button
-				class="bg-opacity-50 absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors duration-200 hover:text-gray-300"
+				class="bg-opacity-50 absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-200 hover:text-gray-300"
+				class:opacity-0={isTransitioning}
 				on:click={closeModal}
 				aria-label="Close modal"
 			>
