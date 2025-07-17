@@ -92,13 +92,13 @@
 									href="https://genki.is"
 									target="_blank"
 									rel="noopener noreferrer">Genki</a
-								>. Top of mind for me is building
+								>, top of mind is finalizing
 								<a
 									href="https://www.youtube.com/watch?v=2c85TVuPOm4"
 									target="_blank"
 									rel="noopener noreferrer">Katla 🌋</a
 								>
-								music synthesizer inspired by Icelandic volcanos. In the past I've
+								polyphonic synthesizer inspired by Icelandic volcanos. In the past I've
 								<a
 									href="https://open.spotify.com/artist/4WGn9awkSk0kpJyAuTjuwq"
 									target="_blank"
