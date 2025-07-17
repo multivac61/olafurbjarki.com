@@ -44,10 +44,10 @@
 
 <svelte:window on:keydown={handleKeydown} />
 
-<div class="bg-white">
-	<main class="isolate">
+<div class="bg-white lg:h-screen lg:overflow-hidden">
+	<main class="isolate lg:h-full">
 		<!-- Hero section -->
-		<div class="relative isolate -z-10">
+		<div class="relative isolate -z-10 lg:h-full">
 			<svg
 				aria-hidden="true"
 				class="absolute inset-x-0 top-0 -z-10 h-256 w-full mask-[radial-gradient(32rem_32rem_at_center,white,transparent)] stroke-gray-200"
@@ -74,8 +74,8 @@
 					class="aspect-801/1036 w-200.25 bg-linear-to-tr from-[#000000] to-[#9089fc] opacity-30"
 				></div>
 			</div>
-			<div class="overflow-hidden">
-				<div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32">
+			<div class="overflow-hidden lg:h-full">
+				<div class="mx-auto max-w-7xl px-6 pt-36 pb-32 sm:pt-60 lg:px-8 lg:pt-32 lg:pb-8 lg:h-full lg:flex lg:items-center">
 					<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
 						<div class="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
 							<h1
