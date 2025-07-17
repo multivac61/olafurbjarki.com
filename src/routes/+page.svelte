@@ -141,7 +141,8 @@
 							<p
 								class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none [&>a]:font-bold [&>a]:whitespace-nowrap [&>a]:hover:underline"
 							>
-								Writing this makes me realise that I have had it pretty great so far.
+								Writing this short bio makes me grateful to have had so many opportunites to create
+								and experience life.
 							</p>
 						</div>
 						<div
