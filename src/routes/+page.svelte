@@ -1,12 +1,12 @@
 <script lang="ts">
 	import cute from '$lib/cute.jpeg';
 	import katla from '$lib/katla.jpeg';
-	import rocker from '$lib/rocker.jpeg';
+	import katla2 from '$lib/katla2.jpeg';
 	import harpa from '$lib/harpa.jpeg';
 	import pirate from '$lib/pirate.jpeg';
 	import { fade } from 'svelte/transition';
 
-	const images = [cute, katla, rocker, harpa, pirate];
+	const images = [cute, katla, katla2, harpa, pirate];
 	let selectedImage: string | null = null;
 	let currentImageIndex = 0;
 
@@ -187,11 +187,11 @@
 									<button
 										type="button"
 										class="aspect-2/3 w-full cursor-pointer rounded-xl border-0 bg-transparent p-0 shadow-lg"
-										on:click={() => openModal(rocker)}
+										on:click={() => openModal(katla2)}
 									>
 										<img
-											src={rocker}
-											alt="With my Vietnamese rocker gang. We played on a boat ride in Ha Long Bay."
+											src={katla2}
+											alt="From Genki's 10 year anniversary concert. Me and my beautiful girlfriend Andrea in the background."
 											class="aspect-2/3 w-full rounded-xl object-cover"
 										/>
 									</button>
